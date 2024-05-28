@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>no.3 e commerce</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	font-family:"montserrat";
+}
+body{
+	background-color: pink;
+}	
+.card{margin-top:50px;
+	width:900px;
+	background:#f1f1f1;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.top-section{
+	height:510px;
+	overflow:hidden;
+	background:#fff;
+	position:relative;
+    text-align: center;
+}
+#image-container {
+	width: 80%;
+	height:100%;
+	object-fit:scale-down;
+}
+.nav{
+	text-align:center;
+}
+.nav img{
+     width:100px;
+     height:100px;
+	border:1px solid #ddd;
+	margin:20px 2px;
+	cursor:pointer;
+	transition:0.3s;
+}
+.nav img:hover{
+	border-color:#6ab04c;
+}
+.price{
+	position:absolute;
+	color:#6ab04c;
+	font-size:24px;
+	bottom:135px;
+}
+.product-info{
+	padding:24px;
+}
+.name{
+	text-transform:uppercase;
+	font-size:24px;
+	color:#333;
+}
+.dis{
+	font-size:26px;
+	opacity:0.7;
+}
+.btn{
+	display:block;
+	background:#6ab04c;
+	text-align:center;
+	color:#fff;
+	padding:10px;
+	margin-top:10px;
+	transition:0.3s;
+}
+.btn:hover{
+	background:#333;
+}
+@media only screen and (max-width: 768px) {
+	.card {
+		width: 80%;
+	}
+	.top-section {
+		height: auto;
+	}
+	#image-container {
+		width: 100%;
+		height: auto;
+	}
+	.nav img {
+		width: 60px;
+		height: 60px;
+	}
+	.price {
+		position: relative;
+		font-size: 18px;
+		bottom: auto;
+	}
+	.name {
+		font-size: 20px;
+	}
+	.dis {
+		font-size: 22px;
+	}
+	.btn {
+		font-size: 14px;
+	}
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top-section">
+       <img id="image-container" src="cf1.jpeg">
+  </div>
+  <div class="nav">
+      <img onclick="change_img(this)" src="cf1.jpeg">
+      <img onclick="change_img(this)" src="cf2.jpeg">
+      <img onclick="change_img(this)" src="cf3.jpeg">
+      <img onclick="change_img(this)" src="cf5.jpeg">
+  </div>
+  <div class="product-info">
+    <div class="price-box">
+        <p class="price">&#8377;14,900</p>
+    </div>
+    <div class="name">SG full cricket kit</div>
+    <div class="dis">Awesome</div>
+    <a class="btn" href="#">ADD TO CART</a>
+  </div>
+</div>
+<script>
+ function change_img(element){
+   var fulling = document.getElementById("image-container");
+   fulling.src = element.src;
+ }
+</script>
+</body>
+</html>
